@@ -2,63 +2,65 @@ Group_A_Project(Hagital_Consultant)
 Secure Remote Access Setup and Configuration for Virtual Machines.
 
 
-Tasks 1...
+Tasks 1...  
 
-Windows VM Configuration and Access
+Windows VM Configuration and Access  
 
-VIRTUAL MACHINE SETUP:
-CREATE A WINDOWS-BASED VIRTUAL MACHINE USING AZURE PORTAL.
-In the portal's search bar, Search for virtual machine, Click on "Create virtual machine"
+VIRTUAL MACHINE SETUP:  
+CREATE A WINDOWS-BASED VIRTUAL MACHINE USING AZURE PORTAL.  
+In the portal's search bar, Search for virtual machine, click on "Create virtual machine"  
 
-BASIC TAB. 
+BASIC TAB.   
 
-PROJECT DETAILS.
-Select Subscription and Resource group.
+PROJECT DETAILS.  
+Select Subscription and Resource group.  
 
-INSTANCE DETAILS.
+INSTANCE DETAILS.  
 
 Vm Name: MyVm
 Region: East Us
 Availability Option: No Infrastructure Redundancy Required. 
 Security Type: Standard
-Image Type: Windows Server 2022 Datacenter
-Vm Architecture: X64
-Size: Standard_D2S_V3 - 2Vcpus,8 Gib Memory
+Image Type: Windows Server 2022 Datacenter  
+Vm Architecture: X64  
+Size: Standard_D2S_V3 - 2Vcpus,8 Gib Memory  
 
-ADMINISTRATOR ACCOUNT.
+ADMINISTRATOR ACCOUNT.  
 
-Username: Jane Doe
-Password: Password
-Confirm password: Password
+Username: Jane Doe  
+Password: Password  
+Confirm password: Password  
 
-Configure the network settings of the VM to ensure it is accessible from the network.
-INBOUND PORT RULES
-Public inbound ports: Allow selected ports.
-Select inbound ports: RDP(3389)
+CONFIGURE THE NETWORK SETTINGS OF THE VM TO ENSURE IT IS ACCESSIBLE FROM THE NETWORK.  
+
+INBOUND PORT RULES  
+Public inbound ports: Allow selected ports.  
+Select inbound ports: RDP(3389)  
+  
 
 DISK TAB.
 
-OS Disk size: Image default (127 GiB)
-OS Disk type: Premium SSD
-Delete with VM: thick(Disck will delete alongside VM when VM is deleted)
-Key management: Platform-managed key
+OS Disk size: Image default (127 GiB)  
+OS Disk type: Premium SSD  
+Delete with VM: thick (Disk will delete alongside VM when VM is deleted)  
+Key management: Platform-managed key  
 
 NETWORKING TAB.
 
-Virtual Network: MyVm-Vnet
-Subnet: Default 
-Public IP: My IP
-NIC network security group: Basic
-Public inbound ports: Allow selected ports.
-Select inbound ports: RDP(3389)
-Load balancing options: None
+Virtual Network: MyVm-Vnet  
+Subnet: Default   
+Public IP: My IP  
+NIC network security group: Basic  
+Public inbound ports: Allow selected ports.  
+Select inbound ports: RDP(3389)  
+Load balancing options: None  
 
-MANAGEMENT TAB
-Auto-shutdown to Enable auto-shutdown
-Shutdown time: 7PM
-Time zone: WAT
+MANAGEMENT TAB  
+Auto-shutdown to Enable auto-shutdown  
+Shutdown time: 7PM  
+Time zone: WAT  
 
-Review + Create.
+Review + Create.  
 .
 .
 .
@@ -96,7 +98,7 @@ ENABLE RDP
 a)  Enable RDP on the Windows VM.
 b) Configure the firewall to allow RDP connections (default port TCP/3389).
 
-a)
+A)
 ON THE VM. 
 Using the "Win + R" open the Run dialog box. enter "sysdm.cpl" to run open System Properties.
 click on the "Remote" tab at the top-right...
@@ -106,8 +108,7 @@ click on the "Remote" tab at the top-right...
 Under "Remote Desktop" select "Allow remote connections to this computer" apply then OK...
 
 
-
-b)
+B)
 Configure the Firewall to Allow RDP Connections
 
 Using Win + R to open the Run dialog box...
@@ -127,8 +128,54 @@ at the top-right, click change settings, check for "Remote Desktop" for both "Pr
 TASK 4.
 Secure the Connection:
 Set up a Virtual Private Network (VPN) or Network Security Group (NSG) to restrict access to the VM to specific IP addresses.
-Enforce Multi-Factor Authentication (MFA) for remote access.
+Create Inbound Security Rules:
+
+Go to the NSG's overview page.
+Click on "Inbound security rules" in the left-hand menu.
+Click on "Add" to create a new rule.
+Source: Select "IP Addresses".
+Source IP Addresses/CIDR Ranges: Enter the specific IP address or range (e.g., 192.168.1.0/24).
+Destination: Select "Any".
+Service: Select the service (e.g., "RDP" for Remote Desktop Protocol).
+Action: Select "Allow".
+Priority: Set a priority number (e.g., 100).
+Name: Enter a name for the rule (e.g., AllowRDPFromSpecificIP).
+Click "Add" to create the rule.
+
+
+
+Create Outbound Security Rules:
+Go to the NSG's overview page.
+Click on "Outbound security rules" in the left-hand menu.
+Click on "Add" to create a new rule.
+Source: Select "Any".
+Destination: Select "IP Addresses".
+Destination IP Addresses/CIDR Ranges: Enter the specific IP address or range (e.g., 192.168.1.0/24).
+Service: Select the service or custom TCP/UDP ports.
+Action: Select "Allow".
+Priority: Set a priority number (e.g., 200).
+Name: Enter a name for the rule (e.g., AllowOutboundToSpecificIP).
+Click "Add" to create the rule.
+Associate the NSG with Your VM's Network Interface:
+Navigate to the VM's "Networking" settings.
+Under "Network interface", click on "Network security group".
+Select the NSG you created.
+Click "Save" to apply the NSG to your VM.
+
+
+
+
+
+
+
+
+//Enforce Multi-Factor Authentication (MFA) for remote access//
 Document the steps taken to secure the VM and the RDP connection.
+
+
+
+
+
 
 5. Test Remote Access:
    - Each group member should test remote access to the Windows VM using RDP.
