@@ -90,20 +90,24 @@ Right-click "Users" then select "New User"<br>
 
 <img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" /><br>
 
-Fill in the details for a group member, then click "Create"<br>
-
+Fill in the details for a group member, then click "Create"
 Assign appropriate permissions based on the principle of least privilege
-
-<img width="570" alt="ADD USERS" src="https://github.com/user-attachments/assets/bebe910a-0c13-4eaa-b4e6-141b440743b1"/><br>
-
+<br>
+<img width="570" alt="ADD USERS" src="https://github.com/user-attachments/assets/bebe910a-0c13-4eaa-b4e6-141b440743b1"/>
 
 <br>
 Babatunde is a Memeber do not access to password.
 <img width="351" alt="Babatunde" src="https://github.com/user-attachments/assets/541ab3e8-8e76-4ff2-b2c9-3fdd5730fabb"/><br>
+
+<br>
 Danita is a member and do not have access to password.<br>
 <img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/><br>
+
+<br>
 Angel Gabriel is admin and requested to change password at next loggon.<br>
 <img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/><br>
+
+<br>
 Suvwe is member<br>
 <img width="357" alt="Suvwe" src="https://github.com/user-attachments/assets/6dec0d05-3de9-48c3-963a-99f82ad2d01c"/><br>
 
