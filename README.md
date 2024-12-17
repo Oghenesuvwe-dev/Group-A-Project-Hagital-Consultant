@@ -7,17 +7,21 @@
  <br>
  In the azure portal's search bar<BR>
 
-Search for virtual machine, click on "Virtual machine" under Services<BR>
+Search for virtual machines, click on "Virtual machines" under Services<BR>
 
+<img width="1038" alt="Azure portal" src="https://github.com/user-attachments/assets/976a410a-61ef-4615-bc80-a9fdc8a76d55" />
 
-<img width="1038" alt="Azure portal" src="https://github.com/user-attachments/assets/976a410a-61ef-4615-bc80-a9fdc8a76d55" /><BR>
+On the next page. 
+Click on create and select Azure virtual machine<be>
+<BR>
 
-Basics TAB.<BR>
-
-PROJECT DETAILS<BR>
+<br>
+On the Basics Tab.
+<BR>
+Project Details.<BR>
 Select Subscription and Resource group.<BR>
 
-INSTANCE DETAILS.<BR>
+Instance Details.<BR>
 Vm Name: MyVm<br>
 Region: East Us<br>
 Availability Option: No Infrastructure Redundancy Required.<br>
@@ -38,7 +42,7 @@ Confirm password: Password<br>
 
 
 <br>
-CONFIGURE THE NETWORK SETTINGS OF THE VM TO ENSURE IT IS ACCESSIBLE FROM THE NETWORK.<br>
+- Configure the network settings of the VM to ensure it is accessible from the network.<br>
 <br>
 inbound port Rules<br>
 Public inbound ports: Allow selected ports.<br> 
@@ -69,7 +73,6 @@ Public inbound ports: Allow selected ports<br>
 Select inbound ports: RDP(3389)<br>
 Load balancing options: None<br>
 <img width="1417" alt="NETWORKING TAB" src="https://github.com/user-attachments/assets/75c1b253-abbd-4fd9-99c8-702421930db0" /><br>
-<br>
 Review + create.<br> 
 
 <br>
@@ -77,8 +80,9 @@ Review + create.<br>
 User Account Management<br>
 - Create user accounts on the Windows VM for each group member.<br>
 - Assign appropriate permissions based on the principle of least privilege.<br>
+
 <br>
-On the VM, open "Computer Management" by entering "computer management" in windows search bar.<br>
+On the VM, open "Computer Management" by entering "Computer Management" in Windows search bar. Select Computer Management.<br>
 
 <img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" /><br>
 <br>
@@ -90,6 +94,8 @@ Fill in the details for a group member, then click "Create"<br>
 
 Assign appropriate permissions based on the principle of least privilege.<br>
 
+
+Babatunde is a Memeber do not access to password, .
 <img width="351" alt="Babatunde" src="https://github.com/user-attachments/assets/541ab3e8-8e76-4ff2-b2c9-3fdd5730fabb"/>
 <img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/>
 <img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/>
@@ -97,9 +103,9 @@ Assign appropriate permissions based on the principle of least privilege.<br>
 <img width="353" alt="Success" src="https://github.com/user-attachments/assets/5cd4c2d4-728d-4fba-b180-6d63f5f803fd"/>
 <img width="352" alt="Iyke" src="https://github.com/user-attachments/assets/2e28814a-7523-4c2a-b4cd-c5563b53680b"/>
 <img width="355" alt="Ola" src="https://github.com/user-attachments/assets/897d6cac-7fb0-4b74-8158-c926fc230198"/><br>
-
+<br>
   
-
+<br>
 3.<br>
 Enable Remote Desktop Protocol (RDP)<br>
 - Enable RDP on the Windows VM.<br>
