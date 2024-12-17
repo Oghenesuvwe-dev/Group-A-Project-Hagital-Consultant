@@ -84,25 +84,34 @@ User Account Management<br>
 <br>
 On the VM, open "Computer Management" by entering "Computer Management" in Windows search bar. Select Computer Management.<br>
 
-<img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" /><br>
+Navigate to "Local Users and Groups" then click "Users"
 <br>
-Navigate to "Local Users and Groups" then click "Users".<br>
 Right-click "Users" then select "New User"<br>
+
+<img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" /><br>
+
 Fill in the details for a group member, then click "Create"<br>
+
+Assign appropriate permissions based on the principle of least privilege
 
 <img width="570" alt="ADD USERS" src="https://github.com/user-attachments/assets/bebe910a-0c13-4eaa-b4e6-141b440743b1"/><br>
 
-Assign appropriate permissions based on the principle of least privilege.<br>
 
+<br>
+Babatunde is a Memeber do not access to password.
+<img width="351" alt="Babatunde" src="https://github.com/user-attachments/assets/541ab3e8-8e76-4ff2-b2c9-3fdd5730fabb"/><br>
+Danita is a member and do not have access to password.<br>
+<img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/><br>
+Angel Gabriel is admin and requested to change password at next loggon.<br>
+<img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/><br>
+Suvwe is member<br>
+<img width="357" alt="Suvwe" src="https://github.com/user-attachments/assets/6dec0d05-3de9-48c3-963a-99f82ad2d01c"/><br>
 
-Babatunde is a Memeber do not access to password, .
-<img width="351" alt="Babatunde" src="https://github.com/user-attachments/assets/541ab3e8-8e76-4ff2-b2c9-3fdd5730fabb"/>
-<img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/>
-<img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/>
-<img width="357" alt="Suvwe" src="https://github.com/user-attachments/assets/6dec0d05-3de9-48c3-963a-99f82ad2d01c"/>
-<img width="353" alt="Success" src="https://github.com/user-attachments/assets/5cd4c2d4-728d-4fba-b180-6d63f5f803fd"/>
-<img width="352" alt="Iyke" src="https://github.com/user-attachments/assets/2e28814a-7523-4c2a-b4cd-c5563b53680b"/>
-<img width="355" alt="Ola" src="https://github.com/user-attachments/assets/897d6cac-7fb0-4b74-8158-c926fc230198"/><br>
+<img width="353" alt="Success" src="https://github.com/user-attachments/assets/5cd4c2d4-728d-4fba-b180-6d63f5f803fd"/><br>
+.<br>
+<img width="352" alt="Iyke" src="https://github.com/user-attachments/assets/2e28814a-7523-4c2a-b4cd-c5563b53680b"/><br>
+.<br>
+<img width="355" alt="Ola" src="https://github.com/user-attachments/assets/897d6cac-7fb0-4b74-8158-c926fc230198"/><br><br>
 <br>
   
 <br>
