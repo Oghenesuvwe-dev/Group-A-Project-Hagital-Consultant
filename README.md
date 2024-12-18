@@ -1,6 +1,9 @@
-Project Title: *Secure Remote Access Setup and Configuration for Virtual Machines<br>
+Project Title: *Secure Remote Access Setup and Configuration for Virtual Machines*<br>
+<br>
 Duration: 3 weeks<br>
+<br>
 *Objective:*<br>
+<br>
 The objective of this project is to enable you to understand, configure, and secure remote access to virtual machines (VMs) running Windows operating systems.<br>
 This group will be responsible for setting up a VM, ensuring it is securely accessible from a physical computer, and documenting the process and security measures.<br>
 
@@ -215,7 +218,7 @@ Create a new rule.<br>
 <br>
 
 <br>
-<img width="579" alt="AllowAnyDNS Outbound" src="https://github.com/user-attachments/assets/7a3aaf0a-2134-4dbb-a8c4-55d910245830" />
+<img width="579" alt="AllowAnyDNS Outbound" src="https://github.com/user-attachments/assets/7a3aaf0a-2134-4dbb-a8c4-55d910245830" /><br>
 Source:  "Any"<br>
 Destination:  "IP Addresses"<br>
 Destination IP Addresses/CIDR Ranges: "VM's IP Address"<br>  
@@ -228,7 +231,7 @@ Save the rule<br>
 
 
 TASK 5.<br>
-Test Remote Access:*<br>
+*Test Remote Access:*<br>
    - Each group member should test remote access to the Windows VM using RDP.<br>
    - Troubleshoot and resolve any connection issues.<br>
 
@@ -238,6 +241,7 @@ TASK 6.<br>
 *Monitoring and Logging:*<br>
   - Enable and configure logging in the Windows Event Viewer to track remote access attempts.<br>
   - Monitor the logs for any unauthorized access attempts and document the findings.<br>
+<br>
 <br>
 On The Vm<br>
 Using "Win + R". open "Run" dialog box.<br>
@@ -260,15 +264,51 @@ For logon events
 4648 Logon attempt using explicit credentials.<br>
 <img width="442" alt="Explicit Loggon" src="https://github.com/user-attachments/assets/fc59e6a3-640a-4b4e-b127-50e29d72a892" /><br>
 <br>
-  
 
+<br>
 
-
-
-
-6. *Monitoring and Logging:*
-   - Enable and configure logging in the Windows Event Viewer to track remote access attempts.
-   - Monitor the logs for any unauthorized access attempts and document the findings.
+<br>
+    - Monitor the logs for any unauthorized access attempts and document the findings.<br>
+<br>
+This is log for 4625 "Failed Loggon" from the Event Log<br>
+<img width="620" alt="Event 4625" src="https://github.com/user-attachments/assets/347b6e19-81a1-4674-878b-96aa79a64f0d" /><br>
+With the log information below<br>
+<br>
+<br>
+Log Name:      Security<br>
+Source:        Microsoft-Windows-Security-Auditing<br>
+Date:          12/18/2024 12:55:28 PM<br>
+Event ID:      4625<br>
+Task Category: Logon<br>
+Level:         Information<br>
+Keywords:      Audit Failure<br>
+User:          N/A<br>
+Computer:      Machine<br>
+Description:<br>
+An account failed to log on.<br>
+<br>
+Subject:<br>
+	Security ID:		SYSTEM<br>
+	Account Name:		MACHINE$<br>
+	Account Domain:		WORKGROUP<br>
+	Logon ID:		0x3E7<br>
+<br>
+Logon Type:			2<br>
+<br>
+Account For Which Logon Failed:<br>
+	Security ID:		NULL SID<br>
+	Account Name:		machine<br>
+	Account Domain:		<br>
+ <br>
+Failure Information:<br>
+	Failure Reason:		Unknown user name or bad password.<br>
+	Status:			0xC000006D<br>
+	Sub Status:		0xC0000064<br>
+<br>
+Process Information:<br>
+	Caller Process ID:	0x1c8<br>
+	Caller Process Name:	C:\Windows\System32\svchost.exe<br>
+<br>
 
 7. *Documentation:*
    - Prepare a comprehensive report detailing the setup, security measures, and testing process.
