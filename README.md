@@ -259,8 +259,7 @@ For logon events
 <br>
 4648 Logon attempt using explicit credentials.<br>
 <img width="442" alt="Explicit Loggon" src="https://github.com/user-attachments/assets/fc59e6a3-640a-4b4e-b127-50e29d72a892" /><br>
-
-
+<br>
   
 
 
