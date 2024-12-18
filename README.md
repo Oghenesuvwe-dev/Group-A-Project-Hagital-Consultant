@@ -1,21 +1,22 @@
-Windows VM Configuration and Access<br>
+Project Title: *Secure Remote Access Setup and Configuration for Virtual Machines<br>
+Duration: 3 weeks<br>
+*Objective:*<br>
+The objective of this project is to enable you to understand, configure, and secure remote access to virtual machines (VMs) running Windows operating systems.<br>
+This group will be responsible for setting up a VM, ensuring it is securely accessible from a physical computer, and documenting the process and security measures.<br>
 
 TASK 1.<br>
 Virtual Machine Setup:<br>
 - Create a Windows-based virtual machine using your Azure portal.
 - Configure the network settings of the VM to ensure it is accessible from the network.<br>
- 
  <br>
  On the azure portal's search bar<BR>
 
 Search for virtual machines, click on "Virtual machines" under Services<BR>
 
 <img width="1038" alt="Azure portal" src="https://github.com/user-attachments/assets/976a410a-61ef-4615-bc80-a9fdc8a76d55" />
-
+<BR>
 On the next page. 
 Click on create and select Azure virtual machine<be>
-<BR>
-
 <br>
 <br>On the Basics Tab.<br>
 <BR>
@@ -41,19 +42,15 @@ Password: Password<br>
 Confirm password: Password<br>
 <img width="1416" alt="ARC ADMIN" src="https://github.com/user-attachments/assets/61ca4416-e84f-46ca-9de4-2fdce6030aec" /><br>
 
-
 <br>
 - Configure the network settings of the VM to ensure it is accessible from the network.<br>
 <br>
 inbound port Rules<br>
 Public inbound ports: Allow selected ports.<br> 
 Select inbound ports: RDP(3389)<br>
-<img width="1419" alt="INBOUND RDP" src="https://github.com/user-attachments/assets/e1c6275d-867b-4be5-9f02-7b6fd020a489" /><br>
-
-  
+<img width="1419" alt="INBOUND RDP" src="https://github.com/user-attachments/assets/e1c6275d-867b-4be5-9f02-7b6fd020a489" /><br>  
 <br>
-DISK Tab.<br>
-
+Disk Tab.<br>
 <br>
 OS Disk size: Image default<br>  
 OS Disk type: Premium SSD<br> 
@@ -64,7 +61,7 @@ Key management: Platform-managed key<br>
 
 
 <br>
-NETWORKING Tab.<br>
+Networking Tab.<br>
 <br>
 Virtual Network: MyVm-Vnet<br>
 Subnet: Default<br> 
@@ -74,18 +71,29 @@ Public inbound ports: Allow selected ports<br>
 Select inbound ports: RDP(3389)<br>
 Load balancing options: None<br>
 <img width="1417" alt="NETWORKING TAB" src="https://github.com/user-attachments/assets/75c1b253-abbd-4fd9-99c8-702421930db0" /><br>
-Review + create.<br> 
+Then, click "Review + create"<br> 
+<br>
+Validation passed... Initializing deployment...<br>
+<img width="961" alt="Valid Passed" src="https://github.com/user-attachments/assets/48268c3b-0aba-49c4-a53f-a8697ca9c8c7" />
+<br>
+<br>
+VM Deployment succeeded<br>
+<img width="950" alt="Deployment Succeeded" src="https://github.com/user-attachments/assets/2f2d7d58-0003-47f9-8ebf-324cfd215462" />
+<br>
+<br>Goto resouce, select VM and loggon...<br>
+<br>
+<img width="1440" alt="MyVm" src="https://github.com/user-attachments/assets/66d3884e-d8c3-48e2-bddb-4a268cc1f27c" />
+<br>
 
 <br>
 Task 2.<br>
 User Account Management<br>
 - Create user accounts on the Windows VM for each group member.<br>
 - Assign appropriate permissions based on the principle of least privilege.<br>
-
 <br>
-ON THE VM, open "Computer Management" by entering "Computer Management" in Windows search bar.
+On The Vm...
 <br>
-Select Computer Management.
+Using Windows search bar type in "Computer Management" then enter<br>
 <br>
 <br>
 Navigate to "Local Users and Groups" then click "Users"
@@ -132,65 +140,43 @@ Enable Remote Desktop Protocol (RDP)<br>
 <br>
 - Enable RDP on the Windows VM.<br>
 <br>
+On The Vm.<br>
+<br>
+Using the "Win + R" open the Run dialog box.<br>
+type "sysdm.cpl" then enter. to open System Properties.<br>
+click on the "Remote" tab at the top-right...<br>
+<img width="407" alt="Remote" src="https://github.com/user-attachments/assets/66c87655-fced-4fd7-8669-04745f469e0e" /><br>
+Under "Remote Desktop" > "Allow remote connections to this computer"<br>
+then OK...<br>
+<br>
+- Configure the firewall to allow RDP connections (default port TCP/3389).<br>
+<br>
 On The Vm<br>
-Using the Windows search bar, Search for Windows Defender Firewall and enter.<br>
+Using the Windows search bar, search for "Windows Defender Firewall" and enter.<br>
 <img width="1044" alt="Windows defender firewall" src="https://github.com/user-attachments/assets/64f34575-b8a1-47ad-a8e6-3216cae8a48b" /><br>
 On the left-hand pane, click on "Inbound Rules"<br>
 <br>
-
-<br>
-then, on the right-hand pane click on "New Rule"<br>
+then, on the right-hand pane, click on "New Rule"<br>
 <img width="1036" alt="New Rule" src="https://github.com/user-attachments/assets/c573fe50-5fd3-4b82-b9f4-ef8a2bc4a3a6" /><br>
-
 <br>
 "Rule Type" select "Port"<br>
 <img width="708" alt="PORT" src="https://github.com/user-attachments/assets/3cdc25c7-2d4a-4abe-86e4-14351d07d531" /><br>
-then select "Next" down below.<br>
-<br>
-
+then down below, select "Next".<br>
 <br>
 Does this rule apply to, select "TCP"<br>
 Specific local Port enter "3389"<br>
 <img width="713" alt="Specific local port" src="https://github.com/user-attachments/assets/6b7db285-41bd-4850-b829-8d934d2b2530" /><br>
 then select "Next" down below.<br>
 <br>
-
-<br>
 "Action" select "Allow the connection."<br>
 then select "Next" below<br>
-<br>
-
 <br>
 "Profile" check for "Private and Public"<br>
 then select "Next" below<br>
 <br>
-
-<br>
 Name "Allow"<br>
 then, click "Finish" down below.<br>
 <br>
-
-<br>
-- Enable RDP on the Windows VM.<br>
-<br>
-ON THE VM.<br>
-Using the "Win + R" open the Run dialog box.<br>
-type "sysdm.cpl" then enter. to open System Properties.<br>
-click on the "Remote" tab at the top-right...<br>
-<img width="407" alt="Remote" src="https://github.com/user-attachments/assets/66c87655-fced-4fd7-8669-04745f469e0e" /><br>
-Under "Remote Desktop" > "Allow remote connections to this computer"  then OK...<br>
-<br>
-<br>
-- Configure the firewall to allow RDP connections (default port TCP/3389).<br>
-<br>
-Using Win + R to open the Run dialog box...<br>
-Type firewall.cpl enter.<br>
-click on "Allow an app or feature through windows defender firewall" in the left pane.<br>
-<br>
-At the top-right, click change settings, check for Remote Desktop for both "Private and Public networks" click OK.<br>
-<img width="616" alt="ALLOW APPS THRU FIREWALL" src="https://github.com/user-attachments/assets/f7c1e54d-ec77-4ef1-ad28-a4182aab9507"/> <br>  
-<br>
-
 <br>
 4.Secure the Connection:<br>
    - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
@@ -206,8 +192,8 @@ On portal.azure.com > NSG's overview page.<br>
 Click on "Inbound security rules" in the left-hand menu.<br>
 Then, Create a new rule.<br>
 <br>
-Source:  "Ip Addresses".<Br>
-Source Ip Addresses/Cidr Ranges: "Vm's Ip Address".<Br>
+Source:  "IP Addresses".<Br>
+Source IP Addresses/Cidr Ranges: "Vm's IP Address".<Br>
 Destination: "Any".<Br>
 Service: "Rdp"<Br>
 Action: "Allow"<Br> 
@@ -223,6 +209,7 @@ Create Outbound Security Rules:
 
 <br>
 On portal.azure.com > NSG's overview page.<br> 
+<br>
 Click on "Outbound security rules" in the left-hand menu.<br> 
 Create a new rule.<br>
 <br>
@@ -240,75 +227,38 @@ Save the rule<br>
 <br>
 
 
+TASK 5.<br>
+Test Remote Access:*<br>
+   - Each group member should test remote access to the Windows VM using RDP.<br>
+   - Troubleshoot and resolve any connection issues.<br>
 
 
-
-
-
-
-
- 
-
-
-5.
-Test Remote Access:*
-   - Each group member should test remote access to the Windows VM using RDP.
-   - Troubleshoot and resolve any connection issues.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-TASK 6.  
-MONITORING AND LOGGING
-Enable and configure logging in the Windows "Event Viewer" to track remote access attempts.
-Monitor the logs for any unauthorized access attempts and document the findings.  
-
-ON THE VM
-
-Using "Win + R". open "Run" dialog box, 
-Type "eventvwr.msc" into the Run dialog box. Enter to open the Event Viewer
-Navigate to Security Logs, double-click on it to view the  loggings.    
-
-
-
-Configure Logging Settings:
-In the Event Viewer, using "Filter Current Log..." in the right-hand Actions pane.
-For logon events 
-4624 for successful logons, 
-4625 for failed logons  
-4648 Logon attempt using explicit credentials. 
-
-
-ENABLING AUDITING FOR LOGON EVENTS.
-In the Event Viewer, 
-Using Win + R, open "Run" dialog box type in "secpol.msc" then enter to open the Local Security Policy.
-In the Local Policies, Audit Policy > then audit policies for Logon double click and check "Success and Failure"
-
-
-
-Project Title: *Secure Remote Access Setup and Configuration for Virtual Machines
-
-Duration: 3 weeks
-
-*Objective:*
-The objective of this project is to enable you to understand, configure, and secure remote access to virtual machines (VMs) running Windows operating systems. This group will be responsible for setting up a VM, ensuring it is securely accessible from a physical computer, and documenting the process and security measures.
+<br>
+TASK 6.<br> 
+*Monitoring and Logging:*<br>
+  - Enable and configure logging in the Windows Event Viewer to track remote access attempts.<br>
+  - Monitor the logs for any unauthorized access attempts and document the findings.<br>
+<br>
+On The Vm<br>
+Using "Win + R". open "Run" dialog box.<br>
+Type "eventvwr.msc" into the Run dialog box.<br>
+Enter to open the Event Viewer.<br>
+<br>
+On the left-hand pane, click Windows Logs, then click Security from the drop down<br>
+<img width="1014" alt="EventVwr" src="https://github.com/user-attachments/assets/c0f55593-dbc7-42d1-86f1-37cc2668c10d" />
+<br>
+Then on the right-hand pane, click on "Filter Current Log.<br>
+<br>
+For logon events
+<br>
+4624 for successful logons<br>
+<img width="439" alt="Success Logon" src="https://github.com/user-attachments/assets/7329ee08-5d4f-4665-90a0-02130687d1f9" />
+<br>
+4625 for failed logons<br>
+<img width="444" alt="Failed Loggon" src="https://github.com/user-attachments/assets/d0ebf79b-49cf-40d8-b20b-45ddbd71fe5e" />
+<br>
+4648 Logon attempt using explicit credentials.<br>
+<img width="442" alt="Explicit Loggon" src="https://github.com/user-attachments/assets/fc59e6a3-640a-4b4e-b127-50e29d72a892" /><br>
 
 
   
