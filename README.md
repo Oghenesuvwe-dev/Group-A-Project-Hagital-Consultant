@@ -1,6 +1,7 @@
-*Group B: Windows VM Configuration and Access<br>
+Windows VM Configuration and Access<br>
 
-1.Virtual Machine Setup:<br>
+TASK 1.<br>
+Virtual Machine Setup:<br>
 - Create a Windows-based virtual machine using your Azure portal.
 - Configure the network settings of the VM to ensure it is accessible from the network.<br>
  
@@ -51,7 +52,7 @@ Select inbound ports: RDP(3389)<br>
 
   
 <br>
-DISK TAB.<br>
+DISK Tab.<br>
 
 <br>
 OS Disk size: Image default<br>  
@@ -63,7 +64,7 @@ Key management: Platform-managed key<br>
 
 
 <br>
-NETWORKING TAB.<br>
+NETWORKING Tab.<br>
 <br>
 Virtual Network: MyVm-Vnet<br>
 Subnet: Default<br> 
@@ -76,116 +77,174 @@ Load balancing options: None<br>
 Review + create.<br> 
 
 <br>
-2.
+Task 2.<br>
 User Account Management<br>
 - Create user accounts on the Windows VM for each group member.<br>
 - Assign appropriate permissions based on the principle of least privilege.<br>
 
 <br>
-On the VM, open "Computer Management" by entering "Computer Management" in Windows search bar. Select Computer Management.<br>
-
+ON THE VM, open "Computer Management" by entering "Computer Management" in Windows search bar.
+<br>
+Select Computer Management.
+<br>
+<br>
 Navigate to "Local Users and Groups" then click "Users"
 <br>
-Right-click "Users" then select "New User"<br>
-
-<img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" /><br>
-
+Right-click "Users" then select "New User"
+<br>
+<img width="980" alt="Com mngmnt" src="https://github.com/user-attachments/assets/a1050ba4-8afb-4725-ba57-36af4c5644d5" />
+<br>
+<br>
 Fill in the details for a group member, then click "Create"
 Assign appropriate permissions based on the principle of least privilege
 <br>
-<img width="570" alt="ADD USERS" src="https://github.com/user-attachments/assets/bebe910a-0c13-4eaa-b4e6-141b440743b1"/>
-
+<img width="570" alt="ADD USERS" src="https://github.com/user-attachments/assets/bebe910a-0c13-4eaa-b4e6-141b440743b1"/><br>
 <br>
-Babatunde is a Memeber do not access to password.
+Babatunde belongs to Member group and password never expires.
+<br>
 <img width="351" alt="Babatunde" src="https://github.com/user-attachments/assets/541ab3e8-8e76-4ff2-b2c9-3fdd5730fabb"/><br>
-
 <br>
-Danita is a member and do not have access to password.<br>
-<img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/><br>
-
-<br>
-Angel Gabriel is admin and requested to change password at next loggon.<br>
-<img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/><br>
-
-<br>
-Suvwe is member<br>
-<img width="357" alt="Suvwe" src="https://github.com/user-attachments/assets/6dec0d05-3de9-48c3-963a-99f82ad2d01c"/><br>
-
+Success belongs to Admin group and is requested to change password on next loggon.<br>
 <img width="353" alt="Success" src="https://github.com/user-attachments/assets/5cd4c2d4-728d-4fba-b180-6d63f5f803fd"/><br>
-.<br>
+<br>
+Angel Gabriel belongs to Admin group and is requested to change password on next loggon.<br>
+<img width="260" alt="Gab" src="https://github.com/user-attachments/assets/b7b0806b-9930-4e0c-94e7-a0c5630b803d"/><br>
+<br>
+Danita belongs to Member and do not have access to password.<br>
+<img width="352" alt="Danita" src="https://github.com/user-attachments/assets/b049eef1-9f8d-4445-8407-63b343bacb34"/><br>
+<br>
+Oghenesuvwe belongs to Members group and cannot change password<br>
+<img width="357" alt="Suvwe" src="https://github.com/user-attachments/assets/6dec0d05-3de9-48c3-963a-99f82ad2d01c"/><br>
+<br>
+Iyke belongs to Members group and do not have access to password.<br>
 <img width="352" alt="Iyke" src="https://github.com/user-attachments/assets/2e28814a-7523-4c2a-b4cd-c5563b53680b"/><br>
-.<br>
-<img width="355" alt="Ola" src="https://github.com/user-attachments/assets/897d6cac-7fb0-4b74-8158-c926fc230198"/><br><br>
 <br>
-  
+Ola belong to Members group and do not have access to password.<br>
+<img width="355" alt="Ola" src="https://github.com/user-attachments/assets/897d6cac-7fb0-4b74-8158-c926fc230198"/><br>
 <br>
-3.<br>
+
+<br>
+Task 3.<br>
 Enable Remote Desktop Protocol (RDP)<br>
 - Enable RDP on the Windows VM.<br>
 - Configure the firewall to allow RDP connections (default port TCP/3389).<br>
 <br>
-
-a)- Enable RDP on the Windows VM.<br>
-ON THE VM.<br>
-Using the "Win + R" open the Run dialog box. enter "sysdm.cpl" to run open System Properties.<br>
-click on the "Remote" tab at the top-right...<br>
-
-<img width="407" alt="Remote" src="https://github.com/user-attachments/assets/66c87655-fced-4fd7-8669-04745f469e0e" /><br>
-
-Under "Remote Desktop" > "Allow remote connections to this computer"  then OK...<br>
+<br>
+- Enable RDP on the Windows VM.<br>
+<br>
+ON THE VM<br>
+Using the Windows search bar, Search for Windows Defender Firewall and enter.<br>
+<img width="1044" alt="Windows defender firewall" src="https://github.com/user-attachments/assets/64f34575-b8a1-47ad-a8e6-3216cae8a48b" /><br>
+On the left-hand pane, click on "Inbound Rules"<br>
+<br>
 
 <br>
-b)
-Configure the Firewall to Allow RDP Connections<br>
+then, on the right-hand pane click on "New Rule"<br>
+<img width="1036" alt="New Rule" src="https://github.com/user-attachments/assets/c573fe50-5fd3-4b82-b9f4-ef8a2bc4a3a6" /><br>
 
+<br>
+"Rule Type" select "Port"<br>
+<img width="708" alt="PORT" src="https://github.com/user-attachments/assets/3cdc25c7-2d4a-4abe-86e4-14351d07d531" /><br>
+then select "Next" down below.<br>
+<br>
+
+<br>
+Does this rule apply to, select "TCP"<br>
+Specific local Port enter "3389"<br>
+<img width="713" alt="Specific local port" src="https://github.com/user-attachments/assets/6b7db285-41bd-4850-b829-8d934d2b2530" /><br>
+then select "Next" down below.<br>
+<br>
+
+<br>
+"Action" select "Allow the connection."<br>
+then select "Next" below<br>
+<br>
+
+<br>
+"Profile" check for "Private and Public"<br>
+then select "Next" below<br>
+<br>
+
+<br>
+Name "Allow"<br>
+then, click "Finish" down below.<br>
+<br>
+
+<br>
+- Enable RDP on the Windows VM.<br>
+<br>
+ON THE VM.<br>
+Using the "Win + R" open the Run dialog box.<br>
+type "sysdm.cpl" then enter. to open System Properties.<br>
+click on the "Remote" tab at the top-right...<br>
+<img width="407" alt="Remote" src="https://github.com/user-attachments/assets/66c87655-fced-4fd7-8669-04745f469e0e" /><br>
+Under "Remote Desktop" > "Allow remote connections to this computer"  then OK...<br>
+<br>
+
+
+<br>
+- Configure the firewall to allow RDP connections (default port TCP/3389).<br>
+<br>
 Using Win + R to open the Run dialog box...<br>
 Type firewall.cpl enter.<br>
 click on "Allow an app or feature through windows defender firewall" in the left pane.<br>
-
-at the top-right, click change settings, check for "Remote Desktop" for both "Private and Public networks" click OK.<br>
-
-
+<br>
+at the top-right, click change settings, check for Remote Desktop for both "Private and Public networks" click OK.<br>
 <img width="616" alt="ALLOW APPS THRU FIREWALL" src="https://github.com/user-attachments/assets/f7c1e54d-ec77-4ef1-ad28-a4182aab9507"/> <br>  
-
+<br>
 
 
 4.Secure the Connection:<br>
-   - Set up a Virtual Private Network (VPN) or Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
-   - Enforce Multi-Factor Authentication (MFA) for remote access.<br>
+   - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
    - Document the steps taken to secure the VM and the RDP connection.<br>
-
-CREATE INBOUND SECURITY RULES:  
-On portal.azure.com > NSG's overview page.  
+<br>
+   - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
+<br>
+On portal.azure.com > NSG's overview page.<br> 
 Click on "Inbound security rules" in the left-hand menu.<br>
-Create a new rule.  
+Create a new rule.<br>
+<br>
+SOURCE:  "IP Addresses".<br>
+SOURCE IP ADDRESSES/CIDR RANGES: "VM's IP Address".<br>
+DESTINATION: "Any".<br>
+SERVICE: "RDP"<br>
+ACTION: "Allow"<br> 
+PRIORITY: "100"<br> 
+NAME: "AllowRDPFromSpecificIP"<br>
+SAVE the rule.<br>
+<img width="579" alt="Inbound Rules" src="https://github.com/user-attachments/assets/eb016845-6a4d-45f2-8f4a-79e91b3acc36" /><br>
+<br>
 
-<img width="579" alt="Inbound Rules" src="https://github.com/user-attachments/assets/eb016845-6a4d-45f2-8f4a-79e91b3acc36" />
-
-SOURCE:  "IP Addresses".  
-SOURCE IP ADDRESSES/CIDR RANGES: "VM's IP Address".  
-DESTINATION: "Any".  
-SERVICE: "RDP"  
-ACTION: "Allow"  
-PRIORITY: "100"  
-NAME: "AllowRDPFromSpecificIP"  
-SAVE the rule.  
-
+<br>
 CREATE OUTBOUND SECURITY RULES:  
+<br>
 
-On portal.azure.com > NSG's overview page.  
-Click on "Outbound security rules" in the left-hand menu.  
-Create a new rule.  
+<br>
+On portal.azure.com > NSG's overview page.<br> 
+Click on "Outbound security rules" in the left-hand menu.<br> 
+Create a new rule.<br>
+<br>
 
+<br>
 <img width="579" alt="AllowAnyDNS Outbound" src="https://github.com/user-attachments/assets/7a3aaf0a-2134-4dbb-a8c4-55d910245830" />
+Source:  "Any"<br>
+Destination:  "IP Addresses"<br>
+Destination IP Addresses/CIDR Ranges: "VM's IP Address"<br>  
+Service "TCP"<br>
+Action:  "Allow"<br> 
+Priority: Set a priority number 200<br>
+Name: "AllowOutboundToSpecificIP"<br>
+Save the rule<br>
+<br>
 
-Source:  "Any"  
-Destination:  "IP Addresses"  
-Destination IP Addresses/CIDR Ranges: "VM's IP Address"  
-Service "TCP"  
-Action:  "Allow"  
-Priority: Set a priority number 200  
-Name: "AllowOutboundToSpecificIP"  
-Save the rule  
+
+
+
+
+
+
+
+
  
 
 
@@ -193,6 +252,25 @@ Save the rule
 Test Remote Access:*
    - Each group member should test remote access to the Windows VM using RDP.
    - Troubleshoot and resolve any connection issues.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 TASK 6.  
