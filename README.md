@@ -6,7 +6,7 @@ Virtual Machine Setup:<br>
 - Configure the network settings of the VM to ensure it is accessible from the network.<br>
  
  <br>
- In the azure portal's search bar<BR>
+ On the azure portal's search bar<BR>
 
 Search for virtual machines, click on "Virtual machines" under Services<BR>
 
@@ -17,7 +17,7 @@ Click on create and select Azure virtual machine<be>
 <BR>
 
 <br>
-On the Basics Tab.
+<br>On the Basics Tab.<br>
 <BR>
 Project Details.<BR>
 Select Subscription and Resource group.<BR>
@@ -30,12 +30,12 @@ Security Type: Standard<br>
 Image: Windows Server 2022 Datacenter<br>
 <img width="1417" alt="BASIC TAB IMAGE" src="https://github.com/user-attachments/assets/e87e71a6-6dce-439b-8885-ec3a16a60bba" /><BR>
 
-
+<br>
 Vm Architecture: X64<br>
-Size: Standard_D2S_V3 - 2Vcpus,8 Gib Memory  
-
-ADMINISTRATOR ACCOUNT.  
-
+Size: Standard_D2S_V3 - 2Vcpus,8 Gib Memory<br>
+<br>
+Administrator Account.  
+<br>
 Username: MyVm<br>
 Password: Password<br> 
 Confirm password: Password<br>
@@ -132,7 +132,7 @@ Enable Remote Desktop Protocol (RDP)<br>
 <br>
 - Enable RDP on the Windows VM.<br>
 <br>
-ON THE VM<br>
+On The Vm<br>
 Using the Windows search bar, Search for Windows Defender Firewall and enter.<br>
 <img width="1044" alt="Windows defender firewall" src="https://github.com/user-attachments/assets/64f34575-b8a1-47ad-a8e6-3216cae8a48b" /><br>
 On the left-hand pane, click on "Inbound Rules"<br>
@@ -180,8 +180,6 @@ click on the "Remote" tab at the top-right...<br>
 <img width="407" alt="Remote" src="https://github.com/user-attachments/assets/66c87655-fced-4fd7-8669-04745f469e0e" /><br>
 Under "Remote Desktop" > "Allow remote connections to this computer"  then OK...<br>
 <br>
-
-
 <br>
 - Configure the firewall to allow RDP connections (default port TCP/3389).<br>
 <br>
@@ -189,34 +187,38 @@ Using Win + R to open the Run dialog box...<br>
 Type firewall.cpl enter.<br>
 click on "Allow an app or feature through windows defender firewall" in the left pane.<br>
 <br>
-at the top-right, click change settings, check for Remote Desktop for both "Private and Public networks" click OK.<br>
+At the top-right, click change settings, check for Remote Desktop for both "Private and Public networks" click OK.<br>
 <img width="616" alt="ALLOW APPS THRU FIREWALL" src="https://github.com/user-attachments/assets/f7c1e54d-ec77-4ef1-ad28-a4182aab9507"/> <br>  
 <br>
 
-
+<br>
 4.Secure the Connection:<br>
    - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
    - Document the steps taken to secure the VM and the RDP connection.<br>
 <br>
-   - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>
+   - Set up a Network Security Group (NSG) to restrict access to the VM to specific IP addresses.<br>  
+<br>
+Create inbound security rule.
+<br>
+
 <br>
 On portal.azure.com > NSG's overview page.<br> 
 Click on "Inbound security rules" in the left-hand menu.<br>
-Create a new rule.<br>
+Then, Create a new rule.<br>
 <br>
-SOURCE:  "IP Addresses".<br>
-SOURCE IP ADDRESSES/CIDR RANGES: "VM's IP Address".<br>
-DESTINATION: "Any".<br>
-SERVICE: "RDP"<br>
-ACTION: "Allow"<br> 
-PRIORITY: "100"<br> 
-NAME: "AllowRDPFromSpecificIP"<br>
-SAVE the rule.<br>
+Source:  "Ip Addresses".<Br>
+Source Ip Addresses/Cidr Ranges: "Vm's Ip Address".<Br>
+Destination: "Any".<Br>
+Service: "Rdp"<Br>
+Action: "Allow"<Br> 
+Priority: "100"<Br> 
+Name: "AllowRDPFromSpecificIP"<br>
+Save the rule.<br>
 <img width="579" alt="Inbound Rules" src="https://github.com/user-attachments/assets/eb016845-6a4d-45f2-8f4a-79e91b3acc36" /><br>
 <br>
 
 <br>
-CREATE OUTBOUND SECURITY RULES:  
+Create Outbound Security Rules:  
 <br>
 
 <br>
